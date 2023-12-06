@@ -10,7 +10,7 @@ export default function Game() {
         <section>
             <BackgroundCanvas Ref={BgCanvasRef} />
             <PlayersCanvas Ref={PlayersCanvasRef} />
-            <BulletsCanvas Ref={BulletsCanvasRef} />
+            <BulletsCanvas Ref={BulletsCanvasReff} />
         </section>
     )
 }
