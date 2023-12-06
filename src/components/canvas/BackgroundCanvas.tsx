@@ -1,9 +1,10 @@
 interface Props {
     Ref: any
+    style?: {}
 }
 const BackgroundCanvas = (props: Props) => {
     return (
-        <canvas ref={props.Ref}></canvas>
+        <canvas style={props.style} ref={props.Ref}></canvas>
     )
 }
 

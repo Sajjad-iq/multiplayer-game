@@ -1,3 +1,4 @@
 import { SocketIoActions } from "./SocketIoActions";
 import { GameBehavior } from "./gameBehavior";
-export { GameBehavior, SocketIoActions }
+import { HomeBackgroundAnimation } from "./HomeBackgroundAnimation";
+export { GameBehavior, SocketIoActions, HomeBackgroundAnimation }

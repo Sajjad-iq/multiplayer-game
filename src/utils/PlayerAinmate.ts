@@ -15,8 +15,9 @@ export class Character {
     gameFrame: number
     CharacterImages: any
     lose: boolean
+    playerId: string
 
-    constructor(ctx: any, x: number, y: number, CharacterImages: any, lose: boolean, flapSpeed: number) {
+    constructor(ctx: any, x: number, y: number, CharacterImages: any, lose: boolean, flapSpeed: number, playerId: string) {
         this.spriteWidth = 128
         this.spriteHeight = 128
         this.width = this.spriteWidth * 1.1
@@ -30,6 +31,7 @@ export class Character {
         this.gameFrame = 0
         this.CharacterImages = CharacterImages
         this.lose = lose
+        this.playerId = playerId
     }
 
     update() {
@@ -44,7 +46,8 @@ export class Character {
         if (this.CharacterImages.length === 4) {
             if (this.FrameX >= 3) this.CharacterImages = idle
             else this.image.src = this.CharacterImages[this.FrameX]
-        } else this.image.src = this.CharacterImages[this.FrameX]
+        }
+        else this.image.src = this.CharacterImages[this.FrameX]
 
         this.ctx.drawImage(this.image, 0, 0, this.spriteWidth, this.spriteHeight, this.x, this.y, this.width, this.height)
     }

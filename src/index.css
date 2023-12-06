@@ -17,3 +17,24 @@ canvas {
     transform: translate(-50%, -50%);
     background: transparent;
 }
+
+
+.absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.blurryBg {
+    backdrop-filter: blur(20px);
+}
+
+h1 {
+    font-size: 1.3rem;
+    color: white;
+}
+
+p{
+   color: white; 
+}

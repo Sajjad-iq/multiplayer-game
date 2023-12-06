@@ -5,7 +5,6 @@ import { GlobalContext } from "../context"
 export function SocketIoActions() {
 
     const { socket, setGameState } = useContext(GlobalContext)
-
     // Send player actions or movements to the server
     const move = (coordinates: any) => {
         socket.emit('move', coordinates);
@@ -20,12 +19,9 @@ export function SocketIoActions() {
 
         if (!socket) return;
 
-
-        socket.on('playerJoined', (player: any) => {
+        socket.on('playerJoined', (playerName: any) => {
             // Handle a new player joining the game
-            // ...
         });
-
         socket.on('playerLeft', (playerId: any) => {
             // Handle a player leaving the game
             // ...

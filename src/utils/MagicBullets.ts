@@ -34,7 +34,7 @@ export class MagicBullets {
         this.height = this.spriteHeight
         this.FrameX = 0
         this.image = new Image()
-        this.flapSpeed = 3
+        this.flapSpeed = 6
         this.gameFrame = 0
         this.CharacterImages = magicBullets
         this.direction = direction

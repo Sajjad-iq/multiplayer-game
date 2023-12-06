@@ -11,14 +11,14 @@ const GlobalContextProvider = ({ children }: ProviderChildrenType) => {
 
     const [socket, setSocket] = useState<any>(null);
     const [gameState, setGameState] = useState(null);
+    const [PlayerName, setPlayerName] = useState<string | null>(null)
 
-    const data = { socket, gameState, setGameState }
+    const data = { socket, gameState, setGameState, PlayerName, setPlayerName }
 
     useEffect(() => {
         // Connect to the Socket.io server
         const socket = io(import.meta.env.VITE_BACKEND_URL);
         setSocket(socket);
-
         // Clean up on component unmount
         return () => {
             socket.disconnect();
